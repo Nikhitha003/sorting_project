@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorting Algorithm Visualizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>Comparison Sorting Algorithms</header>
+
+<div class="controls">
+  <input id="arrayInput" type="text" placeholder="Enter array e.g. 5,3,8,1,9" size="40">
+  <button onclick="loadArray()">Load Array</button>
+
+  <select id="algo">
+    <option value="bubble">Bubble Sort</option>
+    <option value="selection">Selection Sort</option>
+    <option value="insertion">Insertion Sort</option>
+    <option value="merge">Merge Sort</option>
+    <option value="quick">Quick Sort</option>
+  </select>
+
+  <button onclick="start()">Start</button>
+  <button onclick="pause()">Pause</button>
+  <button onclick="stepBack()">Step Back</button>
+  <button onclick="stepForward()">Step Forward</button>
+
+  Speed <input id="speed" type="range" min="50" max="1000" value="200">
+</div>
+
+<div id="bars"></div>
+
+<div id="arrayDisplay">Array: —</div>
+
+<div class="info">
+  Steps: <span id="step">0</span>/<span id="total">0</span> |
+  Comparisons: <span id="cmp">0</span> |
+  Swaps: <span id="swp">0</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
